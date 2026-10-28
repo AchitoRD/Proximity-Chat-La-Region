@@ -22,24 +22,24 @@
 
 ---
 
-## Qué es
+## 💬 Qué es
 
-Un HUD flotante minimalista que vive sobre tu partida: logo, modos **ME / DO / OOC / IC**, escribes, y solo lo ven los jugadores cercanos que tengan la app. Los mensajes duran segundos y **nada se guarda**.
+Un HUD flotante minimalista que vive sobre tu partida: eliges el modo, escribes, y solo lo ven los jugadores cercanos que tengan la app. Los mensajes duran segundos y **nada se guarda**.
 
 - **IC**: hablar en personaje
 - **/me**: acción de tu personaje
 - **/do**: entorno o resultado
 - **OOC**: fuera de rol `(( ... ))`
-- **Proximidad real** con el mapa de ER:LC (API v2). Si se alejan, el mensaje se vuelve `.....`
+- **Proximidad real**: si alguien se aleja, el mensaje se vuelve `.....`
 - **Overlay flotante** arrastrable en PC, app normal en móvil
 - **Auto-actualización** automática (AppImage)
 
 > [!NOTE]
-> Proximity Chat **no modifica Roblox ni inyecta nada**. Es una herramienta externa: lee posiciones vía la API privada de tu servidor ER:LC y entrega mensajes por proximidad.
+> Proximity Chat **no modifica Roblox ni inyecta nada**. Es una herramienta externa que funciona aparte del juego.
 
-## Instalación
+## 📥 Instalación
 
-### Linux (Debian / Ubuntu / Deepin)
+### 🐧 Linux (Debian / Ubuntu / Deepin)
 ```bash
 sudo dpkg -i Proximity-Chat_*_amd64.deb
 ```
@@ -49,66 +49,58 @@ chmod +x Proximity-Chat_*_amd64.AppImage
 ./Proximity-Chat_*_amd64.AppImage
 ```
 
-### Windows
+### 🪟 Windows
 Descarga el `.exe` de la [última release](https://github.com/AchitoRD/rp-chat-releases/releases/latest) y ejecútalo. Si SmartScreen avisa, es por falta de firma: dale a *Más información → Ejecutar de todas formas*.
 
-### Android
-Descarga el `.apk` de la [última release](https://github.com/AchitoRD/rp-chat-releases/releases/latest) e instálalo. Apunta la app a tu servidor (ver [Servidor propio](#servidor-propio)).
+### 🤖 Android
+Descarga el `.apk` de la [última release](https://github.com/AchitoRD/rp-chat-releases/releases/latest) e instálalo.
 
-### macOS
-El `.dmg` está en camino. Mientras tanto, usa la versión web contra tu servidor.
+### 🍎 macOS
+El `.dmg` está en camino.
 
-## Uso
+## 🎮 Uso
 
-1. Enciende tu servidor (ver abajo).
-2. Abre la app e inicia sesión con tu **username de Roblox** (trae tu avatar automáticamente).
+1. Descarga e instala la app.
+2. Ábrela e inicia sesión con tu **username de Roblox** (trae tu avatar automáticamente).
 3. Entra al private server en Roblox con tus compañeros.
 4. Click al logo, elige modo, escribe y presiona Enter. Solo los cercanos lo ven.
 
 > [!IMPORTANT]
 > Para que dos personas chateen, **ambas deben estar dentro del juego** (mismo private server) **y** con la app abierta. Fuera del juego el contador marca `0 cerca`.
 
-## Servidor propio
+## 🛠️ Servidor
 
-El backend está en el [repo privado](https://github.com/AchitoRD/rp-chat) y se despliega con Docker:
+El servidor lo maneja el staff de La Región Roleplay. Tú solo abres la app y listo, no tienes que configurar nada.
 
-```bash
-git clone https://github.com/AchitoRD/rp-chat.git && cd rp-chat
-cp server/.env.example server/.env  # rellena JWT_SECRET y ERLC_SERVER_KEY
-docker compose up -d --build
-```
-
-Necesitas un VPS barato (Hetzner o Contabo desde ~4 €, Oracle tiene capa gratuita) o Railway, Render o Fly.io (con volumen para la base de datos). GitHub **no** puede hospedar el servidor, solo guarda archivos. Más detalles en el README del repo privado.
-
-## FAQ
+## ❓ FAQ
 
 <details>
 <summary><b>¿Me pueden banear de Roblox?</b></summary>
 
-No. La app no toca el cliente de Roblox: no inyecta, no lee memoria y no automatiza el juego. Solo usa APIs públicas (avatar y nombre) y la API privada de **tu propio** servidor ER:LC.
+No. La app no toca el cliente de Roblox: no inyecta, no lee memoria y no automatiza el juego.
 </details>
 
 <details>
 <summary><b>¿Guardan mis mensajes?</b></summary>
 
-No. Los mensajes viven unos segundos en memoria y se borran. La base de datos solo cachea avatar y nombre para el roster.
+No. Los mensajes viven unos segundos y se borran. Solo se guarda tu avatar y nombre para mostrarte en la lista de jugadores.
 </details>
 
 <details>
-<summary><b>¿Funciona sin el server de ER:LC?</b></summary>
+<summary><b>¿Funciona fuera del juego?</b></summary>
 
-Parcialmente. El chat funciona entre sesiones de la app, pero sin posiciones no hay proximidad real (todo llega como "ubicación desconocida").
+No del todo. Necesitas estar dentro del private server para que la app sepa quién tienes cerca.
 </details>
 
 <details>
-<summary><b>La app no conecta / dice "server apagado"</b></summary>
+<summary><b>La app no conecta o dice "server apagado"</b></summary>
 
-Enciende el backend (`docker compose up -d`) y apunta la app a su URL. En móvil usa la IP de tu red o un hostname, no `localhost`.
+Avisa al staff por Discord, probablemente el servidor está en mantenimiento.
 </details>
 
-## Licencia
+## 📄 Licencia
 
-Todos los derechos reservados, La Región Roleplay. El binario se distribuye gratis para jugar.
+Todos los derechos reservados, La Región Roleplay. La app se distribuye gratis para jugar.
 
 [shield-latest]: https://img.shields.io/github/v/release/AchitoRD/rp-chat-releases?color=fb7a05&label=version
 [shield-downloads]: https://img.shields.io/github/downloads/AchitoRD/rp-chat-releases/total?color=fa9418&label=descargas
