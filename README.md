@@ -22,7 +22,7 @@
 
 ---
 
-## <img src="https://api.iconify.design/material-symbols:chat-rounded.svg?color=%23fb7a05" width="26" height="26" align="absmiddle" alt=""/> Qué es
+## <img src="https://api.iconify.design/material-symbols/chat-rounded.svg?color=%23fb7a05" width="26" height="26" align="absmiddle" alt=""/> Qué es
 
 Un HUD flotante minimalista que vive sobre tu partida: eliges el modo, escribes, y solo lo ven los jugadores cercanos que tengan la app. Los mensajes duran segundos y **nada se guarda**.
 
@@ -37,9 +37,9 @@ Un HUD flotante minimalista que vive sobre tu partida: eliges el modo, escribes,
 > [!NOTE]
 > Proximity Chat **no modifica Roblox ni inyecta nada**. Es una herramienta externa que funciona aparte del juego.
 
-## <img src="https://api.iconify.design/material-symbols:download-rounded.svg?color=%23fb7a05" width="26" height="26" align="absmiddle" alt=""/> Instalación
+## <img src="https://api.iconify.design/material-symbols/download-rounded.svg?color=%23fb7a05" width="26" height="26" align="absmiddle" alt=""/> Instalación
 
-### <img src="https://api.iconify.design/logos:linux-tux.svg" width="22" height="22" align="absmiddle" alt=""/> Linux (Debian / Ubuntu / Deepin)
+### <img src="https://api.iconify.design/logos/linux-tux.svg" width="22" height="22" align="absmiddle" alt=""/> Linux (Debian / Ubuntu / Deepin)
 ```bash
 sudo dpkg -i Proximity-Chat_*_amd64.deb
 ```
@@ -49,16 +49,16 @@ chmod +x Proximity-Chat_*_amd64.AppImage
 ./Proximity-Chat_*_amd64.AppImage
 ```
 
-### <img src="https://api.iconify.design/logos:microsoft-windows-icon.svg" width="22" height="22" align="absmiddle" alt=""/> Windows
+### <img src="https://api.iconify.design/logos/microsoft-windows-icon.svg" width="22" height="22" align="absmiddle" alt=""/> Windows
 Descarga el `.exe` de la [última release](https://github.com/AchitoRD/rp-chat-releases/releases/latest) y ejecútalo. Si SmartScreen avisa, es por falta de firma: dale a *Más información → Ejecutar de todas formas*.
 
-### <img src="https://api.iconify.design/logos:android-icon.svg" width="22" height="22" align="absmiddle" alt=""/> Android
+### <img src="https://api.iconify.design/logos/android-icon.svg" width="22" height="22" align="absmiddle" alt=""/> Android
 Descarga el `.apk` de la [última release](https://github.com/AchitoRD/rp-chat-releases/releases/latest) e instálalo.
 
-### <img src="https://api.iconify.design/logos:apple.svg" width="22" height="22" align="absmiddle" alt=""/> macOS
+### <img src="https://api.iconify.design/simple-icons/apple.svg?color=%23fb7a05" width="22" height="22" align="absmiddle" alt=""/> macOS
 El `.dmg` está en camino.
 
-## <img src="https://api.iconify.design/material-symbols:sports-esports-rounded.svg?color=%23fb7a05" width="26" height="26" align="absmiddle" alt=""/> Uso
+## <img src="https://api.iconify.design/material-symbols/sports-esports-rounded.svg?color=%23fb7a05" width="26" height="26" align="absmiddle" alt=""/> Uso
 
 1. Descarga e instala la app.
 2. Ábrela e inicia sesión con tu **username de Roblox** (trae tu avatar automáticamente).
@@ -68,7 +68,7 @@ El `.dmg` está en camino.
 > [!IMPORTANT]
 > Para que dos personas chateen, **ambas deben estar dentro del juego** (mismo private server) **y** con la app abierta. Fuera del juego el contador marca `0 cerca`.
 
-## <img src="https://api.iconify.design/material-symbols:help-rounded.svg?color=%23fb7a05" width="26" height="26" align="absmiddle" alt=""/> FAQ
+## <img src="https://api.iconify.design/material-symbols/help-rounded.svg?color=%23fb7a05" width="26" height="26" align="absmiddle" alt=""/> FAQ
 
 <details>
 <summary><b>¿Me pueden banear de Roblox?</b></summary>
@@ -94,7 +94,7 @@ No del todo. Necesitas estar dentro del private server para que la app sepa qui�
 Avisa al staff, probablemente el servidor está en mantenimiento.
 </details>
 
-## <img src="https://api.iconify.design/material-symbols:description-rounded.svg?color=%23fb7a05" width="26" height="26" align="absmiddle" alt=""/> Licencia
+## <img src="https://api.iconify.design/material-symbols/description-rounded.svg?color=%23fb7a05" width="26" height="26" align="absmiddle" alt=""/> Licencia
 
 Todos los derechos reservados, La Región Roleplay. La app se distribuye gratis para jugar.
 
