@@ -17,22 +17,22 @@
 </div>
 
 <p align="center">
-  <a href="https://github.com/AchitoRD/rp-chat-releases/releases/latest">⬇️ Descargar última versión</a>
+  <a href="https://github.com/AchitoRD/rp-chat-releases/releases/latest">Descargar última versión</a>
 </p>
 
 ---
 
 ## Qué es
 
-Un HUD flotante minimalista que vive sobre tu partida: logo → modos **ME / DO / OOC / IC** → escribes → solo lo ven jugadores cercanos con la app. Los mensajes duran segundos y **nada se guarda**.
+Un HUD flotante minimalista que vive sobre tu partida: logo, modos **ME / DO / OOC / IC**, escribes, y solo lo ven los jugadores cercanos que tengan la app. Los mensajes duran segundos y **nada se guarda**.
 
-- 💬 `IC` — hablar en personaje
-- 🟠 `/me` — acción de tu personaje
-- 🟡 `/do` — entorno / resultado
-- ⚪ `OOC` — fuera de rol `(( ... ))`
-- 📍 Proximidad real con el mapa de ER:LC (API v2: si se alejan, el mensaje se vuelve `.....`)
-- 🪟 Overlay flotante arrastrable en PC · app normal en móvil
-- 🔄 Auto-actualización sola (AppImage)
+- **IC**: hablar en personaje
+- **/me**: acción de tu personaje
+- **/do**: entorno o resultado
+- **OOC**: fuera de rol `(( ... ))`
+- **Proximidad real** con el mapa de ER:LC (API v2). Si se alejan, el mensaje se vuelve `.....`
+- **Overlay flotante** arrastrable en PC, app normal en móvil
+- **Auto-actualización** automática (AppImage)
 
 > [!NOTE]
 > Proximity Chat **no modifica Roblox ni inyecta nada**. Es una herramienta externa: lee posiciones vía la API privada de tu servidor ER:LC y entrega mensajes por proximidad.
@@ -43,34 +43,34 @@ Un HUD flotante minimalista que vive sobre tu partida: logo → modos **ME / DO 
 ```bash
 sudo dpkg -i Proximity-Chat_*_amd64.deb
 ```
-O portable sin instalar:
+O portable, sin instalar:
 ```bash
 chmod +x Proximity-Chat_*_amd64.AppImage
 ./Proximity-Chat_*_amd64.AppImage
 ```
 
 ### Windows
-Descarga el `.exe` de la [última release](https://github.com/AchitoRD/rp-chat-releases/releases/latest) y ejecútalo. (Si SmartScreen avisa, es por falta de firma: dale a *Más información → Ejecutar de todas formas*.)
+Descarga el `.exe` de la [última release](https://github.com/AchitoRD/rp-chat-releases/releases/latest) y ejecútalo. Si SmartScreen avisa, es por falta de firma: dale a *Más información → Ejecutar de todas formas*.
 
 ### Android
-Descarga el `.apk` de la [última release](https://github.com/AchitoRD/rp-chat-releases/releases/latest) e instálalo. Apunta la app a tu servidor (ver [Servidor](#servidor-propio)).
+Descarga el `.apk` de la [última release](https://github.com/AchitoRD/rp-chat-releases/releases/latest) e instálalo. Apunta la app a tu servidor (ver [Servidor propio](#servidor-propio)).
 
 ### macOS
-`.dmg` en camino. Mientras tanto: usa la versión web contra tu servidor.
+El `.dmg` está en camino. Mientras tanto, usa la versión web contra tu servidor.
 
 ## Uso
 
-1. Enciende tu servidor (abajo).
-2. Abre la app e inicia sesión con tu **username de Roblox** (trae tu avatar solo).
+1. Enciende tu servidor (ver abajo).
+2. Abre la app e inicia sesión con tu **username de Roblox** (trae tu avatar automáticamente).
 3. Entra al private server en Roblox con tus compañeros.
-4. Click al logo → elige modo → escribe → Enter. Solo los cercanos lo ven.
+4. Click al logo, elige modo, escribe y presiona Enter. Solo los cercanos lo ven.
 
 > [!IMPORTANT]
 > Para que dos personas chateen, **ambas deben estar dentro del juego** (mismo private server) **y** con la app abierta. Fuera del juego el contador marca `0 cerca`.
 
 ## Servidor propio
 
-¿Quieres correr el backend tú? Está en el [repo privado](https://github.com/AchitoRD/rp-chat) con Docker:
+El backend está en el [repo privado](https://github.com/AchitoRD/rp-chat) y se despliega con Docker:
 
 ```bash
 git clone https://github.com/AchitoRD/rp-chat.git && cd rp-chat
@@ -78,37 +78,37 @@ cp server/.env.example server/.env  # rellena JWT_SECRET y ERLC_SERVER_KEY
 docker compose up -d --build
 ```
 
-Necesitas: un VPS barato (Hetzner/Contabo desde ~4€, Oracle siempre gratis) o Railway/Render/Fly.io (con volumen para la DB). GitHub **no** puede hospedar el servidor (solo guarda archivos). Detalles en el README del repo privado.
+Necesitas un VPS barato (Hetzner o Contabo desde ~4 €, Oracle tiene capa gratuita) o Railway, Render o Fly.io (con volumen para la base de datos). GitHub **no** puede hospedar el servidor, solo guarda archivos. Más detalles en el README del repo privado.
 
 ## FAQ
 
 <details>
 <summary><b>¿Me pueden banear de Roblox?</b></summary>
 
-No. La app no toca el cliente de Roblox: no inyecta, no lee memoria, no automatiza el juego. Solo usa APIs públicas (avatar/nombre) y la API privada de **tu propio** servidor ER:LC.
+No. La app no toca el cliente de Roblox: no inyecta, no lee memoria y no automatiza el juego. Solo usa APIs públicas (avatar y nombre) y la API privada de **tu propio** servidor ER:LC.
 </details>
 
 <details>
 <summary><b>¿Guardan mis mensajes?</b></summary>
 
-No. Los mensajes viven segundos en memoria y se borran. La base solo cachea avatar/nombre para el roster.
+No. Los mensajes viven unos segundos en memoria y se borran. La base de datos solo cachea avatar y nombre para el roster.
 </details>
 
 <details>
 <summary><b>¿Funciona sin el server de ER:LC?</b></summary>
 
-A medias: el chat funciona entre sesiones de la app, pero sin posiciones no hay proximidad real (todo llega como "ubicación desconocida").
+Parcialmente. El chat funciona entre sesiones de la app, pero sin posiciones no hay proximidad real (todo llega como "ubicación desconocida").
 </details>
 
 <details>
 <summary><b>La app no conecta / dice "server apagado"</b></summary>
 
-Enciende el backend (`docker compose up -d`) y apunta la app a su URL. En móvil usa la IP de tu red u hostname, no `localhost`.
+Enciende el backend (`docker compose up -d`) y apunta la app a su URL. En móvil usa la IP de tu red o un hostname, no `localhost`.
 </details>
 
 ## Licencia
 
-Todos los derechos reservados — La Región Roleplay. El binario se distribuye gratis para jugar.
+Todos los derechos reservados, La Región Roleplay. El binario se distribuye gratis para jugar.
 
 [shield-latest]: https://img.shields.io/github/v/release/AchitoRD/rp-chat-releases?color=fb7a05&label=version
 [shield-downloads]: https://img.shields.io/github/downloads/AchitoRD/rp-chat-releases/total?color=fa9418&label=descargas
